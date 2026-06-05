@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SolutionDeploymentAdvisor": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\osama.rashed\\Downloads\\XrmToolbox\\XrmToolBox.exe",
+      "workingDirectory": "C:\\Users\\osama.rashed\\Downloads\\XrmToolbox"
+    }
+  }
+}

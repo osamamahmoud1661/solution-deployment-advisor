@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <AssemblyName>SolutionDeploymentAdvisor</AssemblyName>
+    <RootNamespace>SolutionDeploymentAdvisor</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>Library</OutputType>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.60" />
+    <PackageReference Include="XrmToolBoxPackage" Version="1.2023.10.67" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+
+    <Compile Include="UI\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PostCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PostCreationDialog.Designer.cs">
+      <DependentUpon>PostCreationDialog.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Models\ComponentCategory.cs" />
+    <Compile Include="Models\ComponentInfo.cs" />
+    <Compile Include="Models\ComponentLifecycle.cs" />
+    <Compile Include="Models\LayerInfo.cs" />
+    <Compile Include="Models\PublisherItem.cs" />
+    <Compile Include="Models\RiskLevel.cs" />
+    <Compile Include="Models\SolutionItem.cs" />
+    <Compile Include="Models\SolutionPreview.cs" />
+    <Compile Include="Models\SplitStrategy.cs" />
+    <Compile Include="Models\AnalysisRunResult.cs" />
+    <Compile Include="Models\VersionDecision.cs" />
+
+    <Compile Include="Services\ComponentNameResolver.cs" />
+    <Compile Include="Services\DataverseService.cs" />
+    <Compile Include="Services\ExportService.cs" />
+    <Compile Include="Services\LayerService.cs" />
+    <Compile Include="Services\SolutionComponentService.cs" />
+    <Compile Include="Services\SolutionService.cs" />
+
+    <Compile Include="Components\IComponentAnalyzer.cs" />
+    <Compile Include="Components\FormAnalyzer.cs" />
+    <Compile Include="Components\PluginAnalyzer.cs" />
+    <Compile Include="Components\PluginStepAnalyzer.cs" />
+    <Compile Include="Components\PowerAutomateAnalyzer.cs" />
+    <Compile Include="Components\TableAnalyzer.cs" />
+
+    <Compile Include="Core\AnalysisEngine.cs" />
+    <Compile Include="Core\LifecycleEvaluator.cs" />
+    <Compile Include="Core\RiskEngine.cs" />
+    <Compile Include="Core\SolutionSplitEngine.cs" />
+    <Compile Include="Core\VersionStrategyEngine.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

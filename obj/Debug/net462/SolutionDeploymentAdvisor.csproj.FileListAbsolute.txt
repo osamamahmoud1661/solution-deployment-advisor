@@ -1,0 +1,449 @@
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.AssemblyReference.cache
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.GeneratedMSBuildEditorConfig.editorconfig
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfoInputs.cache
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfo.cs
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.CoreCompileInputs.cache
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x86\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-arm64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.pdb
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\ScintillaNET.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Crm.Sdk.Proxy.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Deployment.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Workflow.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Rest.ClientRuntime.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Connector.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.CrmConnectControl.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Ui.Styles.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.WebResourceUtility.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Core.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.WinForms.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Wpf.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.WinForms.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Newtonsoft.Json.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Common.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Configuration.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Frameworks.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Packaging.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Protocol.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Versioning.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Buffers.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Memory.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Numerics.Vectors.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.Unsafe.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Cng.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Pkcs.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Http.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encodings.Web.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Json.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Extensions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ValueTuple.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.Extensibility.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.ToolLibrary.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.exe
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Win32.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\netstandard.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.AppContext.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Concurrent.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.NonGeneric.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Specialized.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.EventBasedAsync.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.TypeConverter.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Console.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Data.Common.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Contracts.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Debug.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.FileVersionInfo.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Process.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.StackTrace.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TextWriterTraceListener.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tools.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TraceSource.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tracing.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Drawing.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Dynamic.Runtime.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Calendars.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Extensions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.ZipFile.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.DriveInfo.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Watcher.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.IsolatedStorage.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.MemoryMappedFiles.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Pipes.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.UnmanagedMemoryStream.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Expressions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Parallel.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Queryable.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Http.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NameResolution.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NetworkInformation.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Ping.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Requests.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Security.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Sockets.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebHeaderCollection.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.Client.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ObjectModel.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Extensions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Reader.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.ResourceManager.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Writer.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.VisualC.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Extensions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Handles.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Numerics.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Formatters.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Json.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Xml.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Claims.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Algorithms.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Csp.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Encoding.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Primitives.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.X509Certificates.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Principal.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.SecureString.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.Extensions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.RegularExpressions.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Overlapped.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Parallel.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Thread.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.ThreadPool.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Timer.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.ReaderWriter.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XDocument.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlDocument.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlSerializer.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.XDocument.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\Solution.4EDEFCF6.Up2Date
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6)\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.pdb
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x86\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-arm64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.pdb
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\ScintillaNET.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Crm.Sdk.Proxy.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Deployment.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Workflow.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Rest.ClientRuntime.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Connector.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.CrmConnectControl.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Ui.Styles.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.WebResourceUtility.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Core.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.WinForms.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Wpf.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.WinForms.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Newtonsoft.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Common.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Configuration.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Frameworks.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Packaging.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Protocol.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Versioning.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Buffers.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Memory.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Numerics.Vectors.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.Unsafe.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Cng.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Pkcs.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Http.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encodings.Web.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ValueTuple.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.Extensibility.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.ToolLibrary.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.exe
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Win32.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\netstandard.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.AppContext.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Concurrent.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.NonGeneric.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Specialized.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.EventBasedAsync.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.TypeConverter.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Console.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Data.Common.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Contracts.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Debug.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.FileVersionInfo.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Process.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.StackTrace.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TextWriterTraceListener.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tools.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TraceSource.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tracing.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Drawing.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Dynamic.Runtime.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Calendars.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.ZipFile.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.DriveInfo.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Watcher.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.IsolatedStorage.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.MemoryMappedFiles.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Pipes.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.UnmanagedMemoryStream.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Expressions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Parallel.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Queryable.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Http.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NameResolution.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NetworkInformation.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Ping.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Requests.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Security.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Sockets.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebHeaderCollection.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.Client.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ObjectModel.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Reader.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.ResourceManager.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Writer.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.VisualC.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Handles.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Numerics.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Formatters.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Xml.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Claims.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Algorithms.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Csp.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Encoding.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.X509Certificates.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Principal.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.SecureString.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.RegularExpressions.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Overlapped.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Parallel.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Thread.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.ThreadPool.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Timer.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.ReaderWriter.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlSerializer.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.XDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.AssemblyReference.cache
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.GeneratedMSBuildEditorConfig.editorconfig
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfoInputs.cache
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfo.cs
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.CoreCompileInputs.cache
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\Solution.4EDEFCF6.Up2Date
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6) lastWorking Version\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.pdb
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x86\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-x64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\runtimes\win-arm64\native\WebView2Loader.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\SolutionDeploymentAdvisor.pdb
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\ScintillaNET.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Crm.Sdk.Proxy.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Deployment.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Sdk.Workflow.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Rest.ClientRuntime.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Connector.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.CrmConnectControl.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.Ui.Styles.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Xrm.Tooling.WebResourceUtility.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Core.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.WinForms.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Web.WebView2.Wpf.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.WinForms.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\McTools.Xrm.Connection.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Newtonsoft.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Common.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Configuration.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Frameworks.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Packaging.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Protocol.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\NuGet.Versioning.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Buffers.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Memory.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Numerics.Vectors.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.Unsafe.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Cng.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Pkcs.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Http.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ServiceModel.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encodings.Web.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ValueTuple.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.Extensibility.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.ToolLibrary.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\XrmToolBox.exe
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\Microsoft.Win32.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\netstandard.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.AppContext.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Concurrent.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.NonGeneric.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Collections.Specialized.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.EventBasedAsync.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ComponentModel.TypeConverter.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Console.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Data.Common.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Contracts.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Debug.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.FileVersionInfo.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Process.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.StackTrace.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TextWriterTraceListener.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tools.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.TraceSource.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Diagnostics.Tracing.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Drawing.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Dynamic.Runtime.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Calendars.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Globalization.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Compression.ZipFile.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.DriveInfo.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.FileSystem.Watcher.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.IsolatedStorage.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.MemoryMappedFiles.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.Pipes.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.IO.UnmanagedMemoryStream.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Expressions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Parallel.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Linq.Queryable.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Http.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NameResolution.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.NetworkInformation.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Ping.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Requests.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Security.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.Sockets.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebHeaderCollection.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.Client.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Net.WebSockets.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.ObjectModel.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Reflection.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Reader.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.ResourceManager.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Resources.Writer.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.CompilerServices.VisualC.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Handles.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.InteropServices.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Numerics.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Formatters.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Json.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Runtime.Serialization.Xml.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Claims.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Algorithms.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Csp.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Encoding.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.Primitives.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Cryptography.X509Certificates.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.Principal.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Security.SecureString.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.Encoding.Extensions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Text.RegularExpressions.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Overlapped.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Tasks.Parallel.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Thread.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.ThreadPool.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Threading.Timer.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.ReaderWriter.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XmlSerializer.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\bin\Debug\net462\System.Xml.XPath.XDocument.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.AssemblyReference.cache
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.UI.MainControl.resources
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.GenerateResource.cache
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.GeneratedMSBuildEditorConfig.editorconfig
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfoInputs.cache
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfo.cs
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.CoreCompileInputs.cache
+d:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\Solution.4EDEFCF6.Up2Date
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.dll
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.pdb

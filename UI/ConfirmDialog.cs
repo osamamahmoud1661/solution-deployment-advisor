@@ -21,7 +21,7 @@ namespace SolutionDeploymentAdvisor.UI
         {
             _previews = previews;
 
-            Text            = "Review Patches to Create";
+            Text            = "Review Solution(s)/Patch(es) to Create";
             Width           = 900;
             Height          = 600;
             MinimumSize     = new Size(700, 460);
@@ -41,8 +41,9 @@ namespace SolutionDeploymentAdvisor.UI
             // ── Header ───────────────────────────────────────────────────────
             var lblHeader = new Label
             {
-                Text      = $"{_previews.Count} patch solution(s) will be created. " +
-                             "Select a row to inspect its components, then click Create.",
+                Text      = $"{_previews.Count} Solution(s)/Patch(es) will be created. " +
+                             "Select a row to inspect its components, then click Create." +
+                             "Hint!! Solution/Patch Name Column Editable.",
                 Dock      = DockStyle.Top,
                 Height    = 40,
                 Padding   = new Padding(10, 10, 10, 0),
@@ -52,13 +53,30 @@ namespace SolutionDeploymentAdvisor.UI
 
             // ── Patch grid (top) ─────────────────────────────────────────────
             _patchGrid = MakeGrid();
-            _patchGrid.Columns.Add(new DataGridViewTextBoxColumn { Name = "colPatch",   HeaderText = "Patch Name",      FillWeight = 35 });
-            _patchGrid.Columns.Add(new DataGridViewTextBoxColumn { Name = "colParent",  HeaderText = "Parent Solution", FillWeight = 30 });
-            _patchGrid.Columns.Add(new DataGridViewTextBoxColumn { Name = "colVer",     HeaderText = "New Version",     FillWeight = 15 });
-            _patchGrid.Columns.Add(new DataGridViewTextBoxColumn { Name = "colCount",   HeaderText = "Components",      FillWeight = 10 });
+            _patchGrid.ReadOnly = false; // Allow editing in this grid
+
+            var colPatch  = new DataGridViewTextBoxColumn { Name = "colPatch",   HeaderText = "Solution/Patch Name",      FillWeight = 35 };
+            var colParent = new DataGridViewTextBoxColumn { Name = "colParent",  HeaderText = "Parent Solution", FillWeight = 30, ReadOnly = true };
+            var colVer    = new DataGridViewTextBoxColumn { Name = "colVer",     HeaderText = "New Version",     FillWeight = 15, ReadOnly = true };
+            var colCount  = new DataGridViewTextBoxColumn { Name = "colCount",   HeaderText = "Components",      FillWeight = 10, ReadOnly = true };
+
+            _patchGrid.Columns.Add(colPatch);
+            _patchGrid.Columns.Add(colParent);
+            _patchGrid.Columns.Add(colVer);
+            _patchGrid.Columns.Add(colCount);
 
             foreach (var p in _previews)
                 _patchGrid.Rows.Add(p.SolutionName, p.PatchParent ?? "(new)", p.Version, p.Components.Count);
+
+            // Update underlying object when user edits the name
+            _patchGrid.CellEndEdit += (s, e) =>
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    var newName = _patchGrid.Rows[e.RowIndex].Cells[0].Value?.ToString() ?? string.Empty;
+                    _previews[e.RowIndex].SolutionName = newName;
+                }
+            };
 
             _patchGrid.SelectionChanged += (_, __) =>
             {
@@ -69,7 +87,7 @@ namespace SolutionDeploymentAdvisor.UI
             // ── Divider label ────────────────────────────────────────────────
             var lblComponents = new Label
             {
-                Text      = "Components in selected patch:",
+                Text      = "Components in selected solution/patch:",
                 Height    = 24,
                 Dock      = DockStyle.Top,
                 Padding   = new Padding(10, 4, 0, 0),

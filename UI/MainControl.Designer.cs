@@ -99,19 +99,19 @@ namespace SolutionDeploymentAdvisor.UI
             {
                 Left = col2 + 150 + 260,
                 Top = y,
-                Width = 200,
+                Width = 400,
                 DropDownStyle = ComboBoxStyle.DropDown,
                 AutoCompleteMode = AutoCompleteMode.SuggestAppend,
                 AutoCompleteSource = AutoCompleteSource.ListItems
             };
             btnLoadSource = new Button
-            { Text = "Load", Left = col2 + 150 + 464, Top = y + 1, Width = 52, Height = 24 };
+            { Text = "Load", Left = col2 + 150 + 464 + 200, Top = y + 1, Width = 52, Height = 24 };
             btnLoadSource.Click += btnLoadSource_Click;
 
             lblSourceVersion = new Label
             {
                 Text = "",
-                Left = col2 + 150 + 520,
+                Left = col2 + 150 + 520 + 200,
                 Top = y + 3,
                 Width = 160,
                 ForeColor = Color.Gray,
@@ -194,7 +194,7 @@ namespace SolutionDeploymentAdvisor.UI
             btnAnalyze.Click += btnAnalyze_Click;
 
             btnCreate = new Button
-            { Text = "Create Solution(s)/Patche(s)", Left = 98, Top = y, Width = 200, Height = 28, Enabled = false };
+            { Text = "Create Solution(s)/Patch(es)", Left = 98, Top = y, Width = 200, Height = 28, Enabled = false };
             btnCreate.Click += btnCreate_Click;
 
             btnExportCsv = new Button
@@ -238,7 +238,7 @@ namespace SolutionDeploymentAdvisor.UI
 
             lblFilterLabel = new Label { Text = "Filter:", Left = 348, Top = 7, Width = 46 };
             cmbFilter = new ComboBox
-            { Left = 392, Top = 3, Width = 140, DropDownStyle = ComboBoxStyle.DropDownList, Height = 22 };
+            { Left = 398, Top = 3, Width = 140, DropDownStyle = ComboBoxStyle.DropDownList, Height = 22 };
             cmbFilter.Items.AddRange(new object[]
                 { "All", "High", "Medium", "Low", "New", "ExistingUpdated", "Unknown" });
             cmbFilter.SelectedIndex = 0;

@@ -382,7 +382,15 @@ namespace SolutionDeploymentAdvisor.UI
 
             // Build previews
             var previews = new List<SolutionPreview>();
-            var groupedComponents = _analysisResult.GroupBy(c => c.LastTargetSolutionName ?? srcSol.UniqueName);
+            
+            // Extract base solution name (remove _Patch_...) to group components properly
+            // by their parent solution rather than grouping by individual previous patches.
+            var groupedComponents = _analysisResult.GroupBy(c => 
+            {
+                var targetSolName = c.LastTargetSolutionName ?? srcSol.UniqueName;
+                int patchIndex = targetSolName.IndexOf("_Patch", StringComparison.OrdinalIgnoreCase);
+                return patchIndex > 0 ? targetSolName.Substring(0, patchIndex) : targetSolName;
+            });
 
             // Retrieve target solution versions to ensure patches are higher version
             var targetSolutions = _targetService != null
@@ -446,7 +454,7 @@ namespace SolutionDeploymentAdvisor.UI
             btnCreate.Enabled = false;
             WorkAsync(new WorkAsyncInfo
             {
-                Message = $"Creating {patchCount} solution(s)...",
+                Message = $"Creating {patchCount} solution(s)/patch(es)...",
                 Work = (_, args) =>
                 {
                     var svc = new SolutionService(Service);
@@ -535,7 +543,8 @@ namespace SolutionDeploymentAdvisor.UI
                 ColumnSet = new ColumnSet("solutionid", "friendlyname", "uniquename", "version", "createdon", "ismanaged")
             };
             qe.Criteria.AddCondition("uniquename", ConditionOperator.NotEqual, "Default");
-            qe.AddOrder("createdon", OrderType.Ascending);
+            qe.Criteria.AddCondition("ismanaged", ConditionOperator.NotEqual, true);
+            qe.AddOrder("createdon", OrderType.Descending);
 
             var items = new List<SolutionItem>();
             var svcEntityies = svc.RetrieveMultiple(qe).Entities;

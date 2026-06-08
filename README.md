@@ -1,7 +1,15 @@
 # Solution Deployment Advisor – XrmToolBox Plugin
 
-An XrmToolBox plugin that analyzes Dataverse solution components and advises on safe,
-ALM-compliant deployment strategies.
+**Author / Lead Developer:** Osama Mahmoud
+
+An XrmToolBox plugin that analyzes Dataverse solution components across Source and Target environments, advising on safe, ALM-compliant deployment strategies. It automates the generation of smart patches based on component lifecycle, missing target layers, and risk assessment.
+
+---
+
+## Documentation
+
+- 📖 **[User Guide](./User_Guide.md)** - Instructions on how to use the plugin, from connecting environments to deploying patches.
+- ⚙️ **[Technical Documentation](./Technical_Documentation.md)** - Deep dive into the project's architecture, services, and core analysis engine.
 
 ---
 
@@ -19,34 +27,19 @@ ALM-compliant deployment strategies.
 
 ### Install in XrmToolBox
 Copy `SolutionDeploymentAdvisor.dll` (and its dependencies) into:
-```
+```text
 %AppData%\MscrmTools\XrmToolBox\Plugins\
 ```
 Then restart XrmToolBox. The plugin will appear in the tool library.
 
 ---
 
-## Project Layout
+## Key Features
 
-| Folder | Purpose |
-|--------|---------|
-| `UI/` | WinForms controls (main grid, confirm dialog) |
-| `Models/` | Plain data objects |
-| `Services/` | Dataverse API wrappers |
-| `Components/` | Per-component-type analyzers |
-| `Core/` | Orchestration engines |
+- **Cross-Environment Layer Analysis:** Intelligently queries `msdyn_componentlayer` to detect component discrepancies between your dev/source environment and QC/Prod target environments.
+- **Automated Patch Generation:** Groups components by their Base Solution and generates appropriately versioned patches in one click.
+- **Risk & Lifecycle Assessment:** Flags high-risk component deployments (like Tables and Security Roles) and marks components as New, Updated, or Unchanged.
+- **Export Capabilities:** Export your analysis to CSV or generate PAC CLI scripts for automated CI/CD pipelines.
 
 ---
-
-## Extending the Plugin
-
-### Add a new component analyzer
-1. Create a class in `Components/` implementing `IComponentAnalyzer`.
-2. Set `ComponentType` to the Dataverse type code.
-3. Register it in `AnalysisEngine` constructor.
-
-### Recommended next enhancements
-- [ ] Dependency graph visualization
-- [ ] Risk scoring (Red / Yellow / Green per component)
-- [ ] PAC CLI script export
-- [ ] Azure DevOps pipeline gate integration
+*Developed by Osama Mahmoud*

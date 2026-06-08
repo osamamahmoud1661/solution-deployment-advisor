@@ -194,11 +194,11 @@ namespace SolutionDeploymentAdvisor.UI
             btnAnalyze.Click += btnAnalyze_Click;
 
             btnCreate = new Button
-            { Text = "Create Solutions", Left = 98, Top = y, Width = 130, Height = 28, Enabled = false };
+            { Text = "Create Solution(s)/Patche(s)", Left = 98, Top = y, Width = 200, Height = 28, Enabled = false };
             btnCreate.Click += btnCreate_Click;
 
             btnExportCsv = new Button
-            { Text = "Export CSV", Left = 234, Top = y, Width = 90, Height = 28, Enabled = false };
+            { Text = "Export CSV", Left = 304, Top = y, Width = 90, Height = 28, Enabled = false };
             btnExportCsv.Click += btnExportCsv_Click;
 
             // btnExportPac = new Button

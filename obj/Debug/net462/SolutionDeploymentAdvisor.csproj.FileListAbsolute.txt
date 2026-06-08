@@ -444,6 +444,7 @@ D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvis
 D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfoInputs.cache
 D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.AssemblyInfo.cs
 D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.csproj.CoreCompileInputs.cache
-d:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\Solution.4EDEFCF6.Up2Date
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.sourcelink.json
+D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\Solution.4EDEFCF6.Up2Date
 D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.dll
 D:\DeployGuard\New folder (6) lastWorking Version - Copy\SolutionDeploymentAdvisor (5)\SolutionDeploymentAdvisor\obj\Debug\net462\SolutionDeploymentAdvisor.pdb

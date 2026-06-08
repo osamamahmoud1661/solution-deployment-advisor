@@ -2090,11 +2090,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\SolutionDeploymentAdvisor.csproj",
+      "projectUniqueName": "D:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\SolutionDeploymentAdvisor.csproj",
       "projectName": "SolutionDeploymentAdvisor",
-      "projectPath": "d:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\SolutionDeploymentAdvisor.csproj",
+      "projectPath": "D:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\SolutionDeploymentAdvisor.csproj",
       "packagesPath": "C:\\Users\\osama.rashed\\.nuget\\packages\\",
-      "outputPath": "d:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\obj\\",
+      "outputPath": "D:\\DeployGuard\\New folder (6) lastWorking Version - Copy\\SolutionDeploymentAdvisor (5)\\SolutionDeploymentAdvisor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2127,7 +2127,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net462": {
@@ -2142,7 +2142,7 @@
             "version": "[1.2023.10.67, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314\\RuntimeIdentifierGraph.json"
       }
     }
   }

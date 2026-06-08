@@ -105,6 +105,12 @@ namespace SolutionDeploymentAdvisor.Services
                         foreach (var e in collection.Entities)
                         {
                             if (!TryParseComponentId(e, out var cid)) continue;
+
+                            var solName = e.GetAttributeValue<string>("msdyn_solutionname") ?? string.Empty;
+                            if (solName.Equals("Active", StringComparison.OrdinalIgnoreCase) ||
+                                solName.Equals("Default", StringComparison.OrdinalIgnoreCase))
+                                continue;
+
                             if (!result.ContainsKey(cid)) result[cid] = new List<LayerInfo>();
                             result[cid].Add(BuildLayer(cid, e));
                             chunkGotResults = true;
@@ -156,6 +162,11 @@ namespace SolutionDeploymentAdvisor.Services
                 var collection = _service.RetrieveMultiple(query);
                 foreach (var e in collection.Entities)
                 {
+                    var solName = e.GetAttributeValue<string>("msdyn_solutionname") ?? string.Empty;
+                    if (solName.Equals("Active", StringComparison.OrdinalIgnoreCase) ||
+                        solName.Equals("Default", StringComparison.OrdinalIgnoreCase))
+                        continue;
+
                     results.Add(BuildLayer(componentId, e));
                 }
             }
@@ -205,15 +216,20 @@ namespace SolutionDeploymentAdvisor.Services
                         var solName = e.GetAttributeValue<AliasedValue>("sol.uniquename")?.Value as string ?? string.Empty;
                         var prefix = e.GetAttributeValue<AliasedValue>("pub.customizationprefix")?.Value as string ?? string.Empty;
 
+                        // Skip system layers — "Active" and "Default" are always present on every
+                        // component in Dataverse and are not real deployable solution layers.
+                        // Showing them as the target version produces the misleading "Active (v1.0)" display.
+                        if (solName.Equals("Active", StringComparison.OrdinalIgnoreCase) ||
+                            solName.Equals("Default", StringComparison.OrdinalIgnoreCase))
+                            continue;
+
                         if (!result.ContainsKey(objectId)) result[objectId] = new List<LayerInfo>();
-                        
-                        int order = solName.Equals("Active", StringComparison.OrdinalIgnoreCase) || solName.Equals("Default", StringComparison.OrdinalIgnoreCase) ? 9999 : 1;
 
                         result[objectId].Add(new LayerInfo
                         {
-                            ComponentId = objectId,
-                            SolutionName = solName,
-                            LayerOrder = order,
+                            ComponentId   = objectId,
+                            SolutionName  = solName,
+                            LayerOrder    = 1,
                             PublisherName = prefix
                         });
                     }
@@ -245,14 +261,18 @@ namespace SolutionDeploymentAdvisor.Services
                             {
                                 var solName = e.GetAttributeValue<AliasedValue>("sol.uniquename")?.Value as string ?? string.Empty;
                                 var prefix = e.GetAttributeValue<AliasedValue>("pub.customizationprefix")?.Value as string ?? string.Empty;
-                                int order = solName.Equals("Active", StringComparison.OrdinalIgnoreCase) || solName.Equals("Default", StringComparison.OrdinalIgnoreCase) ? 9999 : 1;
+
+                                // Skip system layers — same reason as in batch path above.
+                                if (solName.Equals("Active", StringComparison.OrdinalIgnoreCase) ||
+                                    solName.Equals("Default", StringComparison.OrdinalIgnoreCase))
+                                    continue;
 
                                 if (!result.ContainsKey(id)) result[id] = new List<LayerInfo>();
                                 result[id].Add(new LayerInfo
                                 {
-                                    ComponentId = id,
-                                    SolutionName = solName,
-                                    LayerOrder = order,
+                                    ComponentId   = id,
+                                    SolutionName  = solName,
+                                    LayerOrder    = 1,
                                     PublisherName = prefix
                                 });
                             }

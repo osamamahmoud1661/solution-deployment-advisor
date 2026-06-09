@@ -629,12 +629,11 @@ namespace SolutionDeploymentAdvisor.UI
             _suggestedVersionDecision = null;
         }
 
-        private static void ShowNoConnection() =>
-            MessageBox.Show("Please connect to a Dataverse environment first.",
-                "No Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        private static void ShowNoTargetConnection() =>
-           MessageBox.Show("Please connect to Target Dataverse environment first.",
-               "No Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        private void ShowNoConnection() =>
+            RaiseRequestConnectionEvent(new RequestConnectionEventArgs { ActionName = "", Control = this });
+
+        private void ShowNoTargetConnection() =>
+           RaiseRequestConnectionEvent(new RequestConnectionEventArgs { ActionName = "SelectTarget", Control = this });
         private static void ShowError(string title, Exception ex) =>
             MessageBox.Show($"{title}:\n\n{ex.Message}", "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -9,7 +9,28 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    
+    <!-- NuGet Package Properties for XrmToolBox -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>OsamaMahmoud.SolutionDeploymentAdvisor</PackageId>
+    <Title>Solution Deployment Advisor</Title>
+    <Version>1.2026.1.1</Version>
+    <Authors>Osama Mahmoud Rashed</Authors>
+    <Company>Osama Mahmoud Rashed</Company>
+    <Description>An XrmToolBox plugin that analyzes Dataverse solution components across Source and Target environments, advising on ALM-compliant deployment strategies and automating patch creation.</Description>
+    <PackageTags>XrmToolBox Plugin SolutionDeployment Dataverse</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>icon.jpg</PackageIcon>
+    <BuildOutputTargetFolder>lib\net462\Plugins</BuildOutputTargetFolder>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="LICENSE" Pack="true" PackagePath="\" />
+    <None Include="icon.jpg" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.60" />

@@ -42,6 +42,7 @@ namespace SolutionDeploymentAdvisor.UI
         private Button   btnExportCsv;
         private Button   btnExportPac;
         private Label    lblVersionPreview;
+        private LinkLabel lnkAuthorInfo;
 
         // ── Summary bar & Grid ───────────────────────────────────────────
         private Label    lblHighCount;
@@ -216,6 +217,17 @@ namespace SolutionDeploymentAdvisor.UI
                 Font = new Font("Segoe UI", 8.25f)
             };
 
+            lnkAuthorInfo = new LinkLabel
+            {
+                Text = "By: Osama Mahmoud Rashed (Software Engineer) | osamamahmoudrashed@gmail.com",
+                Left = 900,
+                Top = 3,
+                AutoSize = true,
+                Font = new Font("Segoe UI", 8.5f, FontStyle.Italic),
+
+            };
+            
+
             // ── Add all to pnlTop ──────────────────────────────────────────
             pnlTop.Controls.AddRange(new Control[]
             {
@@ -245,7 +257,7 @@ namespace SolutionDeploymentAdvisor.UI
             cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
 
             pnlSummary.Controls.AddRange(new Control[]
-                { lblHighCount, lblMedCount, lblLowCount, lblTotalCount, lblFilterLabel, cmbFilter });
+                { lblHighCount, lblMedCount, lblLowCount, lblTotalCount, lblFilterLabel, cmbFilter,lnkAuthorInfo });
 
             // ── Grid ───────────────────────────────────────────────────────
             grid = new DataGridView

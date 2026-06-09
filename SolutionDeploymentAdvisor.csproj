@@ -23,6 +23,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>icon.jpg</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/osamamahmoud1661/solution-deployment-advisor/main/icon.jpg</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/osamamahmoud1661/solution-deployment-advisor</PackageProjectUrl>
     <BuildOutputTargetFolder>lib\net462\Plugins</BuildOutputTargetFolder>
   </PropertyGroup>
 

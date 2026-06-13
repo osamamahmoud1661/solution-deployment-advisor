@@ -22,6 +22,9 @@ namespace SolutionDeploymentAdvisor.Models
         public string? TargetVersionDetails    { get; set; }
         public string? MissingPatches          { get; set; }
 
+        public string? ManualTargetSolution    { get; set; }
+        public bool    ApplySplitStrategyToManualSolution { get; set; } = true;
+
         /// <summary>
         /// The solution name of the highest-order layer this component belongs to in the target environment.
         /// Used to group components that share the same last patch when creating new patches.

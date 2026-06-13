@@ -56,24 +56,26 @@ namespace SolutionDeploymentAdvisor.UI
             _patchGrid.ReadOnly = false; // Allow editing in this grid
 
             var colPatch  = new DataGridViewTextBoxColumn { Name = "colPatch",   HeaderText = "Solution/Patch Name",      FillWeight = 35 };
+            var colAction = new DataGridViewTextBoxColumn { Name = "colAction",  HeaderText = "Action", FillWeight = 20, ReadOnly = true };
             var colParent = new DataGridViewTextBoxColumn { Name = "colParent",  HeaderText = "Parent Solution", FillWeight = 30, ReadOnly = true };
             var colVer    = new DataGridViewTextBoxColumn { Name = "colVer",     HeaderText = "New Version",     FillWeight = 15, ReadOnly = true };
             var colCount  = new DataGridViewTextBoxColumn { Name = "colCount",   HeaderText = "Components",      FillWeight = 10, ReadOnly = true };
 
+            _patchGrid.Columns.Add(colAction);
             _patchGrid.Columns.Add(colPatch);
             _patchGrid.Columns.Add(colParent);
             _patchGrid.Columns.Add(colVer);
             _patchGrid.Columns.Add(colCount);
 
             foreach (var p in _previews)
-                _patchGrid.Rows.Add(p.SolutionName, p.PatchParent ?? "(new)", p.Version, p.Components.Count);
+                _patchGrid.Rows.Add(p.Action, p.SolutionName, p.PatchParent ?? "(new)", p.Version, p.Components.Count);
 
             // Update underlying object when user edits the name
             _patchGrid.CellEndEdit += (s, e) =>
             {
-                if (e.ColumnIndex == 0)
+                if (e.ColumnIndex == 1) // SolutionName is at index 1 now
                 {
-                    var newName = _patchGrid.Rows[e.RowIndex].Cells[0].Value?.ToString() ?? string.Empty;
+                    var newName = _patchGrid.Rows[e.RowIndex].Cells[1].Value?.ToString() ?? string.Empty;
                     _previews[e.RowIndex].SolutionName = newName;
                 }
             };

@@ -297,7 +297,7 @@ namespace SolutionDeploymentAdvisor.UI
                 Work = (_, args) =>
                 {
                     var engine = new AnalysisEngine(Service, _targetService);
-                    var components = engine.Analyze(srcSol.SolutionId, targetSolutionId);
+                    var components = engine.Analyze(srcSol.SolutionId, targetSolutionId, targetSol?.FriendlyName);
 
                     // Retrieve target solution versions to calculate highest version
                     var targetSolutions = _targetService != null
@@ -349,99 +349,199 @@ namespace SolutionDeploymentAdvisor.UI
                 return;
             }
 
-            // Fetch the publisher from the selected source solution since the user removed the Publisher UI
-            var sourceSolEntity = Service.Retrieve("solution", srcSol.SolutionId, new Microsoft.Xrm.Sdk.Query.ColumnSet("publisherid"));
-            var pubId = sourceSolEntity.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("publisherid")?.Id.ToString() ?? Guid.Empty.ToString();
+            // Fetch publisher from the source solution
+            var sourceSolEntity = Service.Retrieve("solution", srcSol.SolutionId,
+                new Microsoft.Xrm.Sdk.Query.ColumnSet("publisherid"));
+            var pubId = sourceSolEntity.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("publisherid")
+                ?.Id.ToString() ?? Guid.Empty.ToString();
 
-            var decision = _suggestedVersionDecision ?? new VersionStrategyEngine().Decide(_analysisResult);
-            var parentUniqueName = srcSol.UniqueName;
-            var targetVersionStr = decision.CurrentVersion ?? "1.0.0.0";
-
-            // ── Step 1: Check if a higher patch already exists in source ──────────
+            // ── Step 1: Load source solutions for conflict detection ───────────
             var sourceSolutions = LoadSolutionItems(Service);
-            // Show a confirmation dialog listing the patch solutions to be created
-            
-            
-            
-            
-            var patchPrefix = parentUniqueName + "_Patch_";
-            Version? highestSourcePatchVersion = null;
-            Version.TryParse(targetVersionStr, out var targetVersionParsed);
 
-            foreach (var solItem in sourceSolutions)
+            // Also retrieve ALL source solution versions (name → version) so we can
+            // detect if a proposed new patch version already exists in source.
+            var sourceSolutionVersions = AnalysisEngine.RetrieveSolutionVersions(Service);
+
+            // Build a dictionary: baseSolutionName -> latest open patch in source
+            var sourceOpenPatches = new Dictionary<string, SolutionItem>(StringComparer.OrdinalIgnoreCase);
+            foreach (var sol in sourceSolutions)
             {
-                if (solItem.UniqueName.StartsWith(patchPrefix, StringComparison.OrdinalIgnoreCase))
+                int idx = sol.UniqueName.IndexOf("_Patch", StringComparison.OrdinalIgnoreCase);
+                if (idx > 0)
                 {
-                    if (Version.TryParse(solItem.Version, out var sourcePatchVer))
-                    {
-                        if (highestSourcePatchVersion == null || sourcePatchVer > highestSourcePatchVersion)
-                            highestSourcePatchVersion = sourcePatchVer;
-                    }
+                    var baseKey = sol.UniqueName.Substring(0, idx);
+                    if (!sourceOpenPatches.TryGetValue(baseKey, out var existing))
+                        sourceOpenPatches[baseKey] = sol;
+                    else if (Version.TryParse(sol.Version, out var sv) &&
+                             Version.TryParse(existing.Version, out var ev) && sv > ev)
+                        sourceOpenPatches[baseKey] = sol;
                 }
             }
 
-            // Build previews
-            var previews = new List<SolutionPreview>();
-            
-            // Extract base solution name (remove _Patch_...) to group components properly
-            // by their parent solution rather than grouping by individual previous patches.
-            var groupedComponents = _analysisResult.GroupBy(c => 
-            {
-                var targetSolName = c.LastTargetSolutionName ?? srcSol.UniqueName;
-                int patchIndex = targetSolName.IndexOf("_Patch", StringComparison.OrdinalIgnoreCase);
-                return patchIndex > 0 ? targetSolName.Substring(0, patchIndex) : targetSolName;
-            });
-
-            // Retrieve target solution versions to ensure patches are higher version
+            // Retrieve target solution versions to ensure new patch versions are higher
             var targetSolutions = _targetService != null
                 ? AnalysisEngine.RetrieveSolutionVersions(_targetService)
                 : new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
-            foreach (var grp in groupedComponents)
+            // ── Step 2: Group components by their effective target solution ───
+            // Priority: ManualTargetSolution (New only) > LastTargetSolutionName > source solution name
+            var splitStrategy = SplitStrategy.None;
+            if (cmbSplitStrategy?.SelectedItem != null)
+                Enum.TryParse<SplitStrategy>(cmbSplitStrategy.SelectedItem.ToString(), out splitStrategy);
+
+            var componentGroups = new Dictionary<string, List<ComponentInfo>>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (var comp in _analysisResult)
             {
-                var groupKey = grp.Key;
+                string groupKey;
 
-                // Existing components: ALWAYS create as CloneAsPatch from the BASE target solution.
-                var baseTargetSol = groupKey;
-
-                // Find highest version for THIS specific base solution in the target environment.
-                // Use the source base solution version as fallback to ensure new patch version is higher than source if target has none.
-                var currentTargetHighest = AnalysisEngine.GetHighestTargetVersion(
-                    baseTargetSol,
-                    targetSolutions,
-                    srcSol.Version ?? "1.0.0.0");
-
-                // Decide next version based on existing components.
-                var versionDecision = new VersionStrategyEngine().Decide(currentTargetHighest, grp.ToList());
-                var nextVersion = versionDecision.SuggestedVersion;
-
-                // Ensure the new version is strictly greater than any existing target version.
-                if (Version.TryParse(nextVersion, out var nxtVer) && Version.TryParse(currentTargetHighest, out var curVer))
+                // Manual assignment only applies to New components
+                if (comp.Lifecycle == ComponentLifecycle.New && !string.IsNullOrEmpty(comp.ManualTargetSolution))
                 {
-                    while (nxtVer <= curVer)
+                    // Manual override with optional split strategy
+                    if (comp.ApplySplitStrategyToManualSolution && splitStrategy == SplitStrategy.CustomizationVsProcess)
+                        groupKey = comp.Category == ComponentCategory.Process
+                            ? $"{comp.ManualTargetSolution}_Processes"
+                            : $"{comp.ManualTargetSolution}_Customizations";
+                    else if (comp.ApplySplitStrategyToManualSolution && splitStrategy == SplitStrategy.ByCategory)
+                        groupKey = $"{comp.ManualTargetSolution}_{comp.Category}";
+                    else
+                        groupKey = comp.ManualTargetSolution;
+                }
+                else
+                {
+                    // Auto: strip any existing _Patch suffix to get the base solution name
+                    var autoSolName = comp.LastTargetSolutionName ?? srcSol.UniqueName;
+                    int pIdx = autoSolName.IndexOf("_Patch", StringComparison.OrdinalIgnoreCase);
+                    var baseName = pIdx > 0 ? autoSolName.Substring(0, pIdx) : autoSolName;
+
+                    if (comp.Lifecycle == ComponentLifecycle.New)
+                    {
+                        // New components (no manual override) respect the global split strategy
+                        if (splitStrategy == SplitStrategy.CustomizationVsProcess)
+                            groupKey = comp.Category == ComponentCategory.Process
+                                ? $"{baseName}_Processes"
+                                : $"{baseName}_Customizations";
+                        else if (splitStrategy == SplitStrategy.ByCategory)
+                            groupKey = $"{baseName}_{comp.Category}";
+                        else
+                            groupKey = baseName;
+                    }
+                    else
+                    {
+                        // Existing/Updated: always go to their base patch, no split
+                        groupKey = baseName;
+                    }
+                }
+
+                if (!componentGroups.ContainsKey(groupKey))
+                    componentGroups[groupKey] = new List<ComponentInfo>();
+                componentGroups[groupKey].Add(comp);
+            }
+
+            // ── Step 3: Build SolutionPreview list + PatchDecisionRows ──────────
+            var previews     = new List<SolutionPreview>();
+            var decisionRows = new List<Models.PatchDecisionRow>();
+
+            foreach (var kvp in componentGroups)
+            {
+                var groupKey   = kvp.Key;
+                var comps      = kvp.Value;
+                string patchParent = groupKey;
+
+                var currentTargetHighest = AnalysisEngine.GetHighestTargetVersion(
+                    patchParent, targetSolutions, srcSol.Version ?? "1.0.0.0");
+
+                // Also get the highest version that already exists in SOURCE for this base solution
+                // (parent + all _Patch variants), so we never propose a version already in source.
+                var currentSourceHighest = AnalysisEngine.GetHighestTargetVersion(
+                    patchParent, sourceSolutionVersions, srcSol.Version ?? "1.0.0.0");
+
+                // The floor is whichever is higher: target or source
+                var effectiveFloor = currentTargetHighest;
+                if (Version.TryParse(currentSourceHighest, out var srcFloor) &&
+                    Version.TryParse(currentTargetHighest, out var tgtFloor) &&
+                    srcFloor > tgtFloor)
+                    effectiveFloor = currentSourceHighest;
+
+                var vd          = new VersionStrategyEngine().Decide(effectiveFloor, comps);
+                var nextVersion = vd.SuggestedVersion;
+
+                // Ensure nextVersion is strictly greater than BOTH target highest AND source highest.
+                // This prevents the CloneAsPatch API call from failing with
+                // "A solution with this version already exists" when source already
+                // has a patch at the version we would otherwise propose.
+                if (Version.TryParse(nextVersion, out var nxtVer) &&
+                    Version.TryParse(effectiveFloor, out var floorVer))
+                {
+                    while (nxtVer <= floorVer)
                     {
                         var parts = nxtVer.ToString().Split('.');
                         if (parts.Length == 4 && int.TryParse(parts[3], out var rev))
                         {
                             rev++;
-                            nxtVer = new Version(int.Parse(parts[0]), int.Parse(parts[1]), int.Parse(parts[2]), rev);
+                            nxtVer = new Version(int.Parse(parts[0]), int.Parse(parts[1]),
+                                                 int.Parse(parts[2]), rev);
                             nextVersion = nxtVer.ToString();
                         }
                         else break;
                     }
                 }
 
-                var solName = $"{baseTargetSol}_Patch";
-                if (solName.Length > 48) solName = solName.Substring(0, 48);
-
-                previews.Add(new SolutionPreview
+                var preview = new SolutionPreview
                 {
-                    SolutionName = solName,
-                    Version = nextVersion,
                     PublisherId = pubId,
-                    PatchParent = baseTargetSol,
-                    Components = grp.ToList()
+                    PatchParent = patchParent,
+                    Components  = comps,
+                    Action      = "Create New",
+                    Version     = nextVersion
+                };
+
+                // Detect whether an open patch already exists in source for this group
+                sourceOpenPatches.TryGetValue(patchParent, out var existingPatch);
+
+                decisionRows.Add(new Models.PatchDecisionRow
+                {
+                    BaseSolution        = patchParent,
+                    ExistingPatch       = existingPatch,        // null when none found
+                    ProposedNewVersion  = nextVersion,
+                    TargetHighestVersion = currentTargetHighest,
+                    SourceHighestVersion = currentSourceHighest,
+                    Preview             = preview
                 });
+
+                previews.Add(preview);
+            }
+
+            // ── Step 4: Show the batch Patch Decision dialog ─────────────────
+            // This dialog only appears when at least one patch group has an
+            // existing open patch detected in the source environment.
+            // (When no conflicts exist it still shows so the user can confirm
+            //  which new versions will be created before committing.)
+            using (var decisionDlg = new PatchDecisionDialog(decisionRows))
+            {
+                if (decisionDlg.ShowDialog(this) != DialogResult.OK)
+                    return;   // user cancelled — abort everything
+            }
+
+            // Apply the user's per-row decisions back to each SolutionPreview
+            foreach (var row in decisionRows)
+            {
+                if (row.Decision == Models.PatchDecision.AppendToExisting &&
+                    row.ExistingPatch != null)
+                {
+                    row.Preview.Action             = "Append to Existing";
+                    row.Preview.SolutionName       = row.ExistingPatch.UniqueName;
+                    row.Preview.Version            = row.ExistingPatch.Version;
+                    row.Preview.ExistingSolutionId = row.ExistingPatch.SolutionId;
+                }
+                else
+                {
+                    // Create a brand-new patch with the computed next version
+                    var solName = $"{row.Preview.PatchParent}_Patch";
+                    if (solName.Length > 48) solName = solName.Substring(0, 48);
+                    row.Preview.SolutionName = solName;
+                }
             }
 
             // ── Show patch preview to developer; abort if they cancel ──────
@@ -449,24 +549,34 @@ namespace SolutionDeploymentAdvisor.UI
             if (confirmDlg.ShowDialog(this) != DialogResult.OK)
                 return;
 
-            // After user confirmation, create the patches asynchronously
+            // After user confirmation, create/append patches asynchronously
             var patchCount = previews.Count;
             btnCreate.Enabled = false;
             WorkAsync(new WorkAsyncInfo
             {
-                Message = $"Creating {patchCount} solution(s)/patch(es)...",
+                Message = $"Processing {patchCount} solution(s)/patch(es)...",
                 Work = (_, args) =>
                 {
                     var svc = new SolutionService(Service);
                     foreach (var preview in previews)
                     {
-                        var (_, realUniqueName) = svc.CreateSolution(preview, preview.PatchParent);
+                        string targetUniqueName;
+
+                        if (preview.Action == "Append to Existing" && preview.ExistingSolutionId.HasValue)
+                        {
+                            // Just use the existing patch unique name — no creation needed
+                            targetUniqueName = preview.SolutionName;
+                        }
+                        else
+                        {
+                            // Create new patch via CloneAsPatch
+                            var (_, realUniqueName) = svc.CreateSolution(preview, preview.PatchParent);
+                            targetUniqueName = realUniqueName;
+                        }
+
                         foreach (var comp in preview.Components)
                         {
-                            try
-                            {
-                                svc.AddComponentToSolution(realUniqueName, comp.ComponentId, comp.ComponentType);
-                            }
+                            try { svc.AddComponentToSolution(targetUniqueName, comp.ComponentId, comp.ComponentType); }
                             catch { }
                         }
                     }
@@ -474,7 +584,7 @@ namespace SolutionDeploymentAdvisor.UI
                 PostWorkCallBack = (args) =>
                 {
                     btnCreate.Enabled = true;
-                    if (args.Error != null) { ShowError("Create patches failed", args.Error); return; }
+                    if (args.Error != null) { ShowError("Create/Append patches failed", args.Error); return; }
                     using var dialog = new PostCreationDialog(Service, previews.Select(p => p.SolutionName).ToList());
                     dialog.ShowDialog();
                 }
@@ -579,8 +689,10 @@ namespace SolutionDeploymentAdvisor.UI
                     c.Risk.ToString(),
                     c.SourceVersionDetails ?? string.Empty,
                     c.TargetVersionDetails ?? string.Empty,
+                    GetTargetSolutionAssignedDisplay(c),
                     c.MissingPatches ?? string.Empty,
                     c.RiskReason ?? string.Empty);
+                grid.Rows[idx].Tag = c; // Store the ComponentInfo object in the row tag
                 ApplyRiskColor(grid.Rows[idx], c.Risk);
             }
         }
@@ -637,5 +749,92 @@ namespace SolutionDeploymentAdvisor.UI
         private static void ShowError(string title, Exception ex) =>
             MessageBox.Show($"{title}:\n\n{ex.Message}", "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        private string GetTargetSolutionAssignedDisplay(ComponentInfo c)
+        {
+            if (!string.IsNullOrEmpty(c.ManualTargetSolution))
+            {
+                var suffix = c.ApplySplitStrategyToManualSolution ? " (Auto-Split)" : " (Exact)";
+                return $"[MANUAL] {c.ManualTargetSolution}{suffix}";
+            }
+
+            var srcSol = cmbSourceSolutions.SelectedItem as SolutionItem;
+            var targetSolName = c.LastTargetSolutionName ?? srcSol?.UniqueName ?? "Unknown";
+            int patchIndex = targetSolName.IndexOf("_Patch", StringComparison.OrdinalIgnoreCase);
+            var baseName = patchIndex > 0 ? targetSolName.Substring(0, patchIndex) : targetSolName;
+            
+            if (c.LastTargetSolutionName == null && cmbSplitStrategy.SelectedItem != null)
+            {
+                if (Enum.TryParse<SplitStrategy>(cmbSplitStrategy.SelectedItem.ToString(), out var strategy))
+                {
+                    if (strategy == SplitStrategy.CustomizationVsProcess)
+                    {
+                        return c.Category == ComponentCategory.Process ? $"{baseName} Processes" : $"{baseName} Customizations";
+                    }
+                    if (strategy == SplitStrategy.ByCategory)
+                    {
+                        return $"{baseName} {c.Category}";
+                    }
+                }
+            }
+            return baseName;
+        }
+
+        private void AssignToSolution_Click()
+        {
+            if (grid.SelectedRows.Count == 0) return;
+
+            // Only New components can be manually assigned to a custom solution
+            var newRows = grid.SelectedRows
+                .Cast<DataGridViewRow>()
+                .Where(r => r.Tag is ComponentInfo c && c.Lifecycle == ComponentLifecycle.New)
+                .ToList();
+
+            if (newRows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Manual assignment is only available for New components.\n\n" +
+                    "Existing / Updated components are automatically routed to their original patch.",
+                    "No New Components Selected",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
+            // Collect candidate solution names from all grid rows (for the dropdown)
+            var existingSolutions = new HashSet<string>();
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                if (row.Tag is ComponentInfo c)
+                {
+                    if (!string.IsNullOrEmpty(c.ManualTargetSolution))
+                        existingSolutions.Add(c.ManualTargetSolution);
+                    var auto = GetTargetSolutionAssignedDisplay(c)
+                        .Replace("[MANUAL] ", "").Replace(" (Auto-Split)", "").Replace(" (Exact)", "");
+                    existingSolutions.Add(auto);
+                }
+            }
+
+            var firstNew = newRows[0].Tag as ComponentInfo;
+            var defSol   = firstNew?.ManualTargetSolution
+                           ?? GetTargetSolutionAssignedDisplay(firstNew!)
+                               .Replace("[MANUAL] ", "").Replace(" (Auto-Split)", "").Replace(" (Exact)", "");
+            var defSplit = firstNew?.ApplySplitStrategyToManualSolution ?? true;
+
+            using var dlg = new AssignSolutionDialog(existingSolutions.ToList(), defSol, defSplit);
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                // Only apply to the New component rows that were selected
+                foreach (var row in newRows)
+                {
+                    if (row.Tag is ComponentInfo c)
+                    {
+                        c.ManualTargetSolution = dlg.SelectedSolutionName;
+                        c.ApplySplitStrategyToManualSolution = dlg.ApplySplitStrategy;
+                    }
+                }
+                PopulateGrid(_filteredResult ?? _analysisResult);
+            }
+        }
     }
 }

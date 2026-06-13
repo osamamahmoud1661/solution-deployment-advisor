@@ -45,7 +45,8 @@ namespace SolutionDeploymentAdvisor.Core
             62  => ComponentCategory.UI,            // Chart
             90  => ComponentCategory.Process,       // Plugin Assembly
             92  => ComponentCategory.Process,       // Plugin Step
-            381 => ComponentCategory.Configuration, // Env Variable Definition
+            380 => ComponentCategory.Configuration, // Env Variable Definition
+            381 => ComponentCategory.Configuration, // Env Variable Value
             2000=> ComponentCategory.UI,            // Model-driven App
             _   => ComponentCategory.Unknown
         };
@@ -122,17 +123,29 @@ namespace SolutionDeploymentAdvisor.Core
             return fallbackVersion;
         }
 
-        public static Dictionary<string, Guid> RetrieveExistingComponentNames(IOrganizationService service, List<ComponentInfo> components)
+        public static Dictionary<string, Guid> RetrieveExistingComponentNames(IOrganizationService sourceService, IOrganizationService targetService, List<ComponentInfo> components)
         {
             var result = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);
             if (components == null || components.Count == 0) return result;
 
-            var groups = components.GroupBy(c => c.ComponentType);
+            // ── Metadata types: MetadataId can differ across environments ──
+            // We must resolve target MetadataIds by their logical names/schema names.
+            var metadataStableTypes = new HashSet<int> { 2, 3, 9, 10 };
+            var metadataComponents = components.Where(c => metadataStableTypes.Contains(c.ComponentType)).ToList();
+            if (metadataComponents.Count > 0)
+            {
+                ResolveMetadataGuidsInTarget(sourceService, targetService, metadataComponents, result);
+            }
+
+            var groups = components
+                .Where(c => !metadataStableTypes.Contains(c.ComponentType))
+                .GroupBy(c => c.ComponentType);
+
             foreach (var group in groups)
             {
                 var typeCode = group.Key;
 
-                // If type is not supported by resolver, we fallback to storing their source IDs as "names"
+                // If type is not supported by resolver, fallback to storing their source IDs
                 if (!ComponentNameResolver.TypeMap.TryGetValue(typeCode, out var map))
                 {
                     foreach (var c in group)
@@ -142,47 +155,56 @@ namespace SolutionDeploymentAdvisor.Core
                     continue;
                 }
 
-                // If type is Entity (1), we cannot use RetrieveMultiple on 'entity' logical name.
-                // We use RetrieveEntityRequest or fall back to individual Retrieves.
+                // Entity (type 1): query TARGET metadata by LogicalName via RetrieveEntityRequest
                 if (typeCode == 1)
                 {
                     foreach (var c in group)
                     {
-                        try
+                        int retries = 3;
+                        while (retries > 0)
                         {
-                            var req = new Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest
+                            try
                             {
-                                LogicalName = c.Name,
-                                EntityFilters = Microsoft.Xrm.Sdk.Metadata.EntityFilters.Entity
-                            };
-                            var res = (Microsoft.Xrm.Sdk.Messages.RetrieveEntityResponse)service.Execute(req);
-                            if (res.EntityMetadata != null && res.EntityMetadata.MetadataId.HasValue)
-                            {
-                                result[c.Name] = res.EntityMetadata.MetadataId.Value;
+                                var req = new Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest
+                                {
+                                    LogicalName = c.Name,
+                                    EntityFilters = Microsoft.Xrm.Sdk.Metadata.EntityFilters.Entity
+                                };
+                                var res = (Microsoft.Xrm.Sdk.Messages.RetrieveEntityResponse)targetService.Execute(req);
+                                if (res.EntityMetadata != null && res.EntityMetadata.MetadataId.HasValue)
+                                {
+                                    var targetId = res.EntityMetadata.MetadataId.Value;
+                                    result[c.Name] = targetId;
+                                    result[c.ComponentId.ToString()] = targetId; // Exact mapping
+                                }
+                                break; // Success, break out of retry loop
                             }
-                        }
-                        catch
-                        {
-                            // If not found by name, it doesn't exist
+                            catch (Exception ex)
+                            {
+                                retries--;
+                                if (retries == 0)
+                                {
+                                    // If not found by name after retries (or persistent connection issue), assume it doesn't exist
+                                }
+                                else
+                                {
+                                    System.Threading.Thread.Sleep(500); // Wait before retry
+                                }
+                            }
                         }
                     }
                     continue;
                 }
 
-                // ── Special handling for SystemForm (type 60) ────────────────────────────
-                // Forms are problematic because:
-                //   1. systemform.name is NOT unique — multiple tables can have a form named
-                //      "Main Form", "Event Licensing Main Form", etc.
-                //   2. Form GUIDs differ between environments (forms are recreated on import).
-                // Strategy: match by uniquename first (truly unique), then fall back to
-                // name + objecttypecode (entity logical name) to get the correct target GUID.
+                // Form (type 60): special GUID-remapping logic (GUIDs differ between envs)
                 if (typeCode == 60)
                 {
-                    ResolveFormGuidsInTarget(service, group.ToList(), result);
+                    ResolveFormGuidsInTarget(sourceService, targetService, group.ToList(), result);
                     continue;
                 }
 
-                // For other component types, use bulk RetrieveMultiple by NameAttr
+                // For all other types (Workflows, Security Roles, Web Resources etc.):
+                // GUIDs differ between environments — resolve by name in target
                 var validNames = group.Select(c => c.Name)
                                       .Where(n => !string.IsNullOrWhiteSpace(n) && !Guid.TryParse(n, out _))
                                       .Distinct()
@@ -201,13 +223,15 @@ namespace SolutionDeploymentAdvisor.Core
                         };
                         query.Criteria.AddCondition(map.NameAttr, Microsoft.Xrm.Sdk.Query.ConditionOperator.In, chunk.Cast<object>().ToArray());
 
-                        var entities = service.RetrieveMultiple(query).Entities;
-                        foreach (var e in entities)
+                        var entities = targetService.RetrieveMultiple(query).Entities;
+                        // Only map names that have exactly 1 match to avoid ambiguity
+                        var grouped = entities.GroupBy(e => e.GetAttributeValue<string>(map.NameAttr)).ToList();
+                        foreach (var g in grouped)
                         {
-                            var nameVal = e.GetAttributeValue<string>(map.NameAttr);
-                            if (!string.IsNullOrWhiteSpace(nameVal))
+                            var nameVal = g.Key;
+                            if (!string.IsNullOrWhiteSpace(nameVal) && g.Count() == 1)
                             {
-                                result[nameVal] = e.Id;
+                                result[nameVal] = g.First().Id;
                             }
                         }
                     }
@@ -225,7 +249,7 @@ namespace SolutionDeploymentAdvisor.Core
                                     TopCount = 1
                                 };
                                 fallbackQuery.Criteria.AddCondition(map.NameAttr, Microsoft.Xrm.Sdk.Query.ConditionOperator.Equal, name);
-                                var res = service.RetrieveMultiple(fallbackQuery);
+                                var res = targetService.RetrieveMultiple(fallbackQuery);
                                 if (res.Entities.Count > 0)
                                 {
                                     result[name] = res.Entities[0].Id;
@@ -250,6 +274,92 @@ namespace SolutionDeploymentAdvisor.Core
         }
 
         /// <summary>
+        /// Resolves target-environment MetadataIds for metadata components.
+        /// Because MetadataIds can differ across environments if created manually, we must query
+        /// the target environment using the component's logical identifier (Name, SchemaName, etc.).
+        /// </summary>
+        private static void ResolveMetadataGuidsInTarget(
+            IOrganizationService sourceService,
+            IOrganizationService targetService,
+            List<ComponentInfo> components,
+            Dictionary<string, Guid> result)
+        {
+            foreach (var c in components)
+            {
+                if (string.IsNullOrWhiteSpace(c.Name) || Guid.TryParse(c.Name, out _)) continue;
+
+                try
+                {
+                    if (c.ComponentType == 2) // Column
+                    {
+                        // 1. Get EntityLogicalName from Source (because ComponentInfo.Name is only LogicalName)
+                        var sourceReq = new Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest
+                        {
+                            MetadataId = c.ComponentId,
+                            RetrieveAsIfPublished = true
+                        };
+                        var sourceResp = (Microsoft.Xrm.Sdk.Messages.RetrieveAttributeResponse)sourceService.Execute(sourceReq);
+                        var attrMeta = sourceResp.AttributeMetadata;
+                        
+                        if (attrMeta != null)
+                        {
+                            // 2. Query Target by EntityLogicalName and LogicalName
+                            var targetReq = new Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest
+                            {
+                                EntityLogicalName = attrMeta.EntityLogicalName,
+                                LogicalName = attrMeta.LogicalName,
+                                RetrieveAsIfPublished = true
+                            };
+                            var targetResp = (Microsoft.Xrm.Sdk.Messages.RetrieveAttributeResponse)targetService.Execute(targetReq);
+                            if (targetResp?.AttributeMetadata?.MetadataId != null)
+                            {
+                                var targetId = targetResp.AttributeMetadata.MetadataId.Value;
+                                result[c.Name] = targetId;
+                                result[c.ComponentId.ToString()] = targetId; // Exact mapping prevents name collisions
+                            }
+                        }
+                    }
+                    else if (c.ComponentType == 3 || c.ComponentType == 10) // Relationship
+                    {
+                        var targetReq = new Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest
+                        {
+                            Name = c.Name,
+                            RetrieveAsIfPublished = true
+                        };
+                        var targetResp = (Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipResponse)targetService.Execute(targetReq);
+                        if (targetResp?.RelationshipMetadata?.MetadataId != null)
+                        {
+                            var targetId = targetResp.RelationshipMetadata.MetadataId.Value;
+                            result[c.Name] = targetId;
+                            result[c.ComponentId.ToString()] = targetId;
+                        }
+                    }
+                    else if (c.ComponentType == 9) // OptionSet
+                    {
+                        var targetReq = new Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest
+                        {
+                            Name = c.Name,
+                            RetrieveAsIfPublished = true
+                        };
+                        var targetResp = (Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetResponse)targetService.Execute(targetReq);
+                        if (targetResp?.OptionSetMetadata?.MetadataId != null)
+                        {
+                            var targetId = targetResp.OptionSetMetadata.MetadataId.Value;
+                            result[c.Name] = targetId;
+                            result[c.ComponentId.ToString()] = targetId;
+                        }
+                    }
+                }
+                catch
+                {
+                    // If exception occurs, it means the metadata doesn't exist in target — leave it unmapped
+                }
+            }
+        }
+
+
+
+        /// <summary>
         /// Resolves target-environment GUIDs for SystemForm components (type 60).
         /// Forms have two problems: their GUIDs differ across environments, and their
         /// <c>name</c> field is NOT unique (multiple tables can share the same form name).
@@ -262,6 +372,7 @@ namespace SolutionDeploymentAdvisor.Core
         /// rest of <see cref="AnalysisEngine"/> can use it for layer queries.
         /// </summary>
         private static void ResolveFormGuidsInTarget(
+            IOrganizationService sourceService,
             IOrganizationService targetService,
             List<ComponentInfo>   sourceForms,
             Dictionary<string, Guid> result)
@@ -269,28 +380,33 @@ namespace SolutionDeploymentAdvisor.Core
             if (sourceForms.Count == 0) return;
 
             // ── Step 1: fetch source form metadata (uniquename + objecttypecode) ──────
-            // We need the source uniquename and objecttypecode to find the matching form
-            // in the target, because GUIDs differ between environments.
             var sourceIds = sourceForms.Select(c => c.ComponentId).Distinct().ToList();
-
-            // Build a lookup: sourceFormId → (uniquename, objecttypecode, displayname)
             var sourceFormMeta = new Dictionary<Guid, (string UniqueName, string ObjectTypeCode, string DisplayName)>();
+            
             const int chunkSize = 200;
             for (int i = 0; i < sourceIds.Count; i += chunkSize)
             {
                 var chunk = sourceIds.Skip(i).Take(chunkSize).ToList();
                 try
                 {
-                    // NOTE: this query runs against the SOURCE service passed in as targetService.
-                    // We actually need to query it against the source to get the uniquename.
-                    // However, RetrieveExistingComponentNames is called with the TARGET service.
-                    // So we query the target with the form names we already resolved.
-                    // Instead, we use the component's Name (already resolved from source) + objecttypecode
-                    // from a separate source query isn't available here. Use uniquename-only matching below.
-                    _ = chunk; // suppress unused warning; handled per-form below
-                    break;
+                    var sourceQuery = new Microsoft.Xrm.Sdk.Query.QueryExpression("systemform")
+                    {
+                        ColumnSet = new Microsoft.Xrm.Sdk.Query.ColumnSet("name", "objecttypecode", "uniquename"),
+                        NoLock = true
+                    };
+                    sourceQuery.Criteria.AddCondition("formid", Microsoft.Xrm.Sdk.Query.ConditionOperator.In, chunk.Cast<object>().ToArray());
+                    
+                    var srcEntities = sourceService.RetrieveMultiple(sourceQuery).Entities;
+                    foreach (var e in srcEntities)
+                    {
+                        sourceFormMeta[e.Id] = (
+                            e.GetAttributeValue<string>("uniquename"),
+                            e.GetAttributeValue<string>("objecttypecode"),
+                            e.GetAttributeValue<string>("name")
+                        );
+                    }
                 }
-                catch { break; }
+                catch { }
             }
 
             // ── Step 2: For each source form, find its target counterpart ─────────────
@@ -305,48 +421,48 @@ namespace SolutionDeploymentAdvisor.Core
 
                 try
                 {
-                    // Try: name + objecttypecode match (most reliable fallback without uniquename)
-                    // We query all forms in target with the same display name, then disambiguate
-                    // by objecttypecode if multiple matches exist.
-                    var nameQuery = new Microsoft.Xrm.Sdk.Query.QueryExpression("systemform")
-                    {
-                        ColumnSet = new Microsoft.Xrm.Sdk.Query.ColumnSet("name", "objecttypecode", "uniquename", "formid"),
-                        NoLock = true
-                    };
-                    nameQuery.Criteria.AddCondition("name", Microsoft.Xrm.Sdk.Query.ConditionOperator.Equal, formName);
+                    sourceFormMeta.TryGetValue(form.ComponentId, out var meta);
 
-                    var matches = targetService.RetrieveMultiple(nameQuery).Entities;
-                    if (matches.Count == 1)
+                    if (meta.UniqueName != null && !string.IsNullOrEmpty(meta.UniqueName))
                     {
-                        // Unambiguous match by name alone
-                        result[formName] = matches[0].Id;
+                        var nameQuery = new Microsoft.Xrm.Sdk.Query.QueryExpression("systemform")
+                        {
+                            ColumnSet = new Microsoft.Xrm.Sdk.Query.ColumnSet("uniquename", "formid"),
+                            NoLock = true,
+                            TopCount = 1
+                        };
+                        nameQuery.Criteria.AddCondition("uniquename", Microsoft.Xrm.Sdk.Query.ConditionOperator.Equal, meta.UniqueName);
+                        var matches = targetService.RetrieveMultiple(nameQuery).Entities;
+                        if (matches.Count > 0)
+                        {
+                            result[formName] = matches[0].Id;
+                            continue;
+                        }
                     }
-                    else if (matches.Count > 1)
+
+                    // Fallback to name + objecttypecode
+                    var fallbackQuery = new Microsoft.Xrm.Sdk.Query.QueryExpression("systemform")
                     {
-                        // Multiple forms share the same name — try to narrow by uniquename first
-                        // (uniquename is stable across environments when set explicitly)
-                        // We compare against what uniquename the SOURCE form has, but we only
-                        // have the display name here. As a best-effort disambiguation, pick the
-                        // form whose objecttypecode appears in the source name (heuristic), or
-                        // just store ALL matches keyed by name — only one will be used.
-                        // Best reliable disambiguator: check if any match has a non-empty uniquename
-                        // that matches the source's ComponentId hint (not available here).
-                        // Fallback: pick the first match but log the ambiguity.
-                        var preferred = matches
-                            .FirstOrDefault(e => !string.IsNullOrEmpty(e.GetAttributeValue<string>("uniquename")))
-                            ?? matches[0];
-                        result[formName] = preferred.Id;
+                        ColumnSet = new Microsoft.Xrm.Sdk.Query.ColumnSet("name", "formid"),
+                        NoLock = true,
+                        TopCount = 2
+                    };
+                    fallbackQuery.Criteria.AddCondition("name", Microsoft.Xrm.Sdk.Query.ConditionOperator.Equal, formName);
+                    if (!string.IsNullOrEmpty(meta.ObjectTypeCode))
+                    {
+                        fallbackQuery.Criteria.AddCondition("objecttypecode", Microsoft.Xrm.Sdk.Query.ConditionOperator.Equal, meta.ObjectTypeCode);
                     }
-                    // If matches.Count == 0, form is not in target — leave result entry absent.
+                    var fallbackMatches = targetService.RetrieveMultiple(fallbackQuery).Entities;
+                    if (fallbackMatches.Count == 1)
+                    {
+                        result[formName] = fallbackMatches[0].Id;
+                    }
                 }
-                catch
-                {
-                    // If lookup fails, don't add — the component will be treated as "not in target"
-                }
+                catch { }
             }
         }
 
-        public List<ComponentInfo> Analyze(Guid sourceSolutionId, Guid? targetSolutionId = null)
+        public List<ComponentInfo> Analyze(Guid sourceSolutionId, Guid? targetSolutionId = null, string? targetSolutionName = null)
         {
             var componentSvc  = new SolutionComponentService(_sourceService);
             var nameResolver  = new ComponentNameResolver(_sourceService);
@@ -363,7 +479,7 @@ namespace SolutionDeploymentAdvisor.Core
             var targetComponentIdsByName = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);
             if (_targetService != null)
             {
-                targetComponentIdsByName = RetrieveExistingComponentNames(_targetService, sourceComponents);
+                targetComponentIdsByName = RetrieveExistingComponentNames(_sourceService, _targetService, sourceComponents);
             }
 
             // 3. Fetch component IDs
@@ -458,16 +574,28 @@ namespace SolutionDeploymentAdvisor.Core
                 if (_targetService != null)
                 {
                     Guid targetId = c.ComponentId;
-                    if (targetComponentIdsByName.TryGetValue(c.Name, out var tId))
+                    // Prefer original component ID if layers exist for it already;
+                    // only remap if layers don't exist under original ID
+                    bool origHasLayers = targetLayers != null && targetLayers.ContainsKey(c.ComponentId);
+                    if (!origHasLayers)
                     {
-                        targetId = tId;
+                        // Check if we mapped the Source ID -> Target ID exactly (prevents name collisions)
+                        if (targetComponentIdsByName.TryGetValue(c.ComponentId.ToString(), out var exactTgtId))
+                        {
+                            targetId = exactTgtId;
+                        }
+                        else if (targetComponentIdsByName.TryGetValue(c.Name, out var tId))
+                        {
+                            targetId = tId;
+                        }
                     }
 
                     List<LayerInfo>? tgtL = null;
                     if (targetLayers != null)
                         targetLayers.TryGetValue(targetId, out tgtL);
 
-                    existsInTarget = (targetLookup != null && targetLookup.ContainsKey(targetId))
+                    existsInTarget = (targetLookup != null && (targetLookup.ContainsKey(c.ComponentId) || targetLookup.ContainsKey(targetId)))
+                        || targetComponentIdsByName.ContainsKey(c.ComponentId.ToString())
                         || targetComponentIdsByName.ContainsKey(c.Name)
                         || (tgtL != null && tgtL.Count > 0);
 
@@ -514,7 +642,15 @@ namespace SolutionDeploymentAdvisor.Core
                     else
                     {
                         // Component not found in any target layer
-                        c.TargetVersionDetails = existsInTarget ? "No layer data" : "Not in target";
+                        if (existsInTarget)
+                        {
+                            c.TargetVersionDetails = string.IsNullOrEmpty(targetSolutionName) ? "Present in Target (No layer data)" : targetSolutionName;
+                            c.LastTargetSolutionName = targetSolutionName;
+                        }
+                        else
+                        {
+                            c.TargetVersionDetails = "Not in target";
+                        }
                         c.MissingPatches       = existsInTarget ? "Unknown"       : (c.SourceVersionDetails ?? "All source layers missing");
                         c.Lifecycle            = existsInTarget ? ComponentLifecycle.ExistingUpdated : ComponentLifecycle.New;
                     }

@@ -15,5 +15,8 @@ namespace SolutionDeploymentAdvisor.Models
         /// Null means create as a plain new solution.
         /// </summary>
         public string? PatchParent  { get; set; } = null;
+
+        public string Action { get; set; } = "Create New";
+        public System.Guid? ExistingSolutionId { get; set; }
     }
 }

@@ -32,6 +32,8 @@ namespace SolutionDeploymentAdvisor.Services
             { 44,  ("report",                        "name") },
             { 300, ("canvasapp",                     "name") },
             { 2000,("appmodule",                     "name") },
+            { 380,("environmentvariabledefinition",  "schemaname") },
+            { 381,("environmentvariablevalue",       "value") },
         };
 
         public ComponentNameResolver(IOrganizationService service)

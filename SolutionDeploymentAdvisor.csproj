@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
@@ -32,7 +32,7 @@
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="" />
     <None Include="LICENSE" Pack="true" PackagePath="" />
-    <Content Include="$(TargetPath)" Pack="true" PackagePath="lib\net462\Plugins\" />
+    <None Include="$(OutputPath)$(AssemblyName).dll" Pack="true" PackagePath="lib\net462\Plugins\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +63,12 @@
     <Compile Include="UI\PostCreationDialog.Designer.cs">
       <DependentUpon>PostCreationDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AssignSolutionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PatchDecisionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
 
     <Compile Include="Models\ComponentCategory.cs" />
     <Compile Include="Models\ComponentInfo.cs" />
@@ -75,6 +81,7 @@
     <Compile Include="Models\SplitStrategy.cs" />
     <Compile Include="Models\AnalysisRunResult.cs" />
     <Compile Include="Models\VersionDecision.cs" />
+    <Compile Include="Models\PatchDecisionRow.cs" />
 
     <Compile Include="Services\ComponentNameResolver.cs" />
     <Compile Include="Services\DataverseService.cs" />

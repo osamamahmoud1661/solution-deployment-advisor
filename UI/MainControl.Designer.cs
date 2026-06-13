@@ -32,7 +32,6 @@ namespace SolutionDeploymentAdvisor.UI
         private ComboBox cmbPublishers;
         private Button   btnLoadPublishers;
 
-        // ── Row 3.5: Split Strategy ────────────────────────────────────────
         private Label    lblSplitStrategy;
         private ComboBox cmbSplitStrategy;
 
@@ -237,7 +236,7 @@ namespace SolutionDeploymentAdvisor.UI
         lblTargetSol, cmbTargetSolutions, btnLoadTarget,
         lblPublisher, cmbPublishers, btnLoadPublishers,
         lblSplitStrategy, cmbSplitStrategy,
-        btnAnalyze, btnCreate, btnExportCsv, 
+        btnAnalyze, btnCreate, btnExportCsv,
                 //btnExportPac, 
                 lblVersionPreview
             });
@@ -271,6 +270,9 @@ namespace SolutionDeploymentAdvisor.UI
                 BorderStyle = BorderStyle.None,
                 ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
             };
+            grid.ContextMenuStrip = new ContextMenuStrip();
+            grid.ContextMenuStrip.Items.Add("Assign to Solution/Patch...", null, (s, e) => AssignToSolution_Click());
+
             grid.Columns.AddRange(
                 new DataGridViewTextBoxColumn { Name = "colName", HeaderText = "Component", Width = 200 },
                 new DataGridViewTextBoxColumn { Name = "colType", HeaderText = "Type", Width = 130 },
@@ -279,6 +281,7 @@ namespace SolutionDeploymentAdvisor.UI
                 new DataGridViewTextBoxColumn { Name = "colRisk", HeaderText = "Risk", Width = 70 },
                 new DataGridViewTextBoxColumn { Name = "colSourceVersion", HeaderText = "Source Version/Patches", Width = 150 },
                 new DataGridViewTextBoxColumn { Name = "colTargetVersion", HeaderText = "Target Version/Patches", Width = 150 },
+                new DataGridViewTextBoxColumn { Name = "colTargetAssigned", HeaderText = "Target Solution (Assigned)", Width = 170 },
                 new DataGridViewTextBoxColumn { Name = "colMissingPatches", HeaderText = "Missing Patches/Updates", Width = 150 },
                 new DataGridViewTextBoxColumn
                 {

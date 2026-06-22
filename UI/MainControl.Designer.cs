@@ -198,7 +198,7 @@ namespace SolutionDeploymentAdvisor.UI
             btnCreate.Click += btnCreate_Click;
 
             btnExportCsv = new Button
-            { Text = "Export CSV", Left = 304, Top = y, Width = 90, Height = 28, Enabled = false };
+            { Text = "Export Excel", Left = 304, Top = y, Width = 100, Height = 28, Enabled = false };
             btnExportCsv.Click += btnExportCsv_Click;
 
             // btnExportPac = new Button

@@ -572,6 +572,7 @@ namespace SolutionDeploymentAdvisor.UI
                             // Create new patch via CloneAsPatch
                             var (_, realUniqueName) = svc.CreateSolution(preview, preview.PatchParent);
                             targetUniqueName = realUniqueName;
+                            preview.SolutionName = realUniqueName;
                         }
 
                         foreach (var comp in preview.Components)
@@ -609,10 +610,10 @@ namespace SolutionDeploymentAdvisor.UI
         {
             if (_filteredResult == null) return;
             using var dlg = new SaveFileDialog
-                { Filter = "CSV files|*.csv", FileName = "ComponentAnalysis.csv" };
+                { Filter = "Excel Workbook|*.xlsx", FileName = "ComponentAnalysis.xlsx" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
-            ExportService.SaveToFile(ExportService.ToCsv(_filteredResult), dlg.FileName);
-            MessageBox.Show("CSV exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExportService.ToXlsx(_filteredResult, dlg.FileName);
+            MessageBox.Show("Excel report exported successfully.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPac_Click(object sender, EventArgs e)

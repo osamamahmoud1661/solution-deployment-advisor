@@ -16,7 +16,7 @@ When you open the plugin in XrmToolBox:
 
 Once connected:
 1. **Source Solution:** Select the unmanaged solution from your Source environment that contains the changes you want to deploy.
-2. **Target Solution (Optional):** You can scope the analysis to a specific solution in the Target environment, or leave it as `(Search Entire Target Environment)` to globally check for component collisions.
+2. **Target Solution :** globally check for component collisions.
 
 ## 3. Running the Analysis
 
@@ -48,6 +48,4 @@ Instead of manually creating patches and adding components one by one, the plugi
 
 ## 5. Exporting Data
 
-If you need to share the analysis or use it in an automated pipeline:
 - **Export CSV:** Saves the grid analysis to a readable Excel/CSV file.
-- **Export PAC CLI:** Generates a shell script (`.sh` or `.bat`) containing the necessary Microsoft Power Platform CLI commands to export and deploy your solutions automatically.

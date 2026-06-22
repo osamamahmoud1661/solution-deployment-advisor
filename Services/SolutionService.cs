@@ -25,7 +25,8 @@ namespace SolutionDeploymentAdvisor.Services
                 ComponentId = componentId,
                 ComponentType = componentType,
                 SolutionUniqueName = solutionUniqueName.Replace(" ", "_"),
-                AddRequiredComponents = false
+                AddRequiredComponents = false,
+                DoNotIncludeSubcomponents = true
             };
             _service.Execute(request);
         }
